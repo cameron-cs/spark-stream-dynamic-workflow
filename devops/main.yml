@@ -1,0 +1,18 @@
+variables:
+  SCALA: "scala-2.13"
+  AIRFLOW: /usr/local/airflow
+  DAGS: ${AIRFLOW}/dags
+  SPARK: ${AIRFLOW}/spark
+stages:
+  - build
+  - deploy
+
+cache:
+  untracked: true
+  paths:
+    - "target"
+include:
+  - project: 'devops'
+    file: 'build.yml'
+  - project: 'devops'
+    file: 'deploy.yml'

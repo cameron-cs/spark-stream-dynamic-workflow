@@ -1,0 +1,19 @@
+{
+"streams_merger_dynamic_workflow_params": {
+  "hdfsPostsPath": "/data/posts_stream_job/Posts/delta/parquet",
+  "hdfsOffsetsPostsPath": "/data/posts_stream_job/offsets/Posts/parquet",
+  "hdfsBlogsPath": "/data/blogs_stream_job/Blogs/delta/parquet",
+  "hdfsOffsetsBlogsPath": "/data/blogs_stream_job/offsets/Blogs/parquet",
+  "hdfsMetricsPath": "/data/metrics_stream_job/Metrics/delta/parquet",
+  "hdfsOffsetsMetricsPath": "/data/metrics_stream_job/offsets/Metrics/parquet",
+  "hdfsMergedBlogsPath": "/data/Blogs/parquet",
+  "hdfsMergedPostsPath": "/data/Posts/parquet",
+  "selfOnly": false,
+  "edgeName": null,
+  "hdfsSkipTrash": true,
+  "frameLimit": "30",
+  "endDate": "2025-12-31",
+  "batchSize": "10",
+  "dayFrame": "10"
+}
+}

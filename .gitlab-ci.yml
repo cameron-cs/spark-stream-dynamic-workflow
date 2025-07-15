@@ -1,0 +1,5 @@
+include:
+  - project: 'devops'
+    file: 'main.yml'
+
+

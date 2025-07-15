@@ -1,5 +1,22 @@
-*.class
-*.log
+/target
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+.history
+.cache
+.idea
+.lib/
+sbt/*
+.xml*
+
+
+.bsp/
+/null/*
+/venv/
+/deploy/dags/dags.iml
+
+.DS_Store

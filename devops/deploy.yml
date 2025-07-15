@@ -1,0 +1,29 @@
+.deploy:
+  image: registry.yourhost.com/project/deploy
+  cache: {}
+  before_script:
+    - eval $(ssh-agent -s)
+    - echo "$VANILLA_HDP_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - ssh ${VANILLA_AIRFLOW} "mkdir -p ${DAGS}"
+    - ssh ${VANILLA_AIRFLOW} "mkdir -p ${SPARK}/${MODULE_NAME}"
+  script:
+    - hostname
+    - if [[ ! -z ${MODULE_NAME} ]]; then scp ./deploy/vars/${MODULE_NAME}_params.json ${VANILLA_AIRFLOW}:/usr/local/airflow/dags/vars/; ssh ${VANILLA_AIRFLOW} "airflow variables import /usr/local/airflow/dags/vars/${MODULE_NAME}_params.json"; fi
+    - if [[ ! -z ${DAG} ]]; then scp ./deploy/dags/${DAG} ${VANILLA_AIRFLOW}:${DAGS}; fi
+    - if [[ ! -z $JAR ]]; then for fl in $JAR; do scp ${CI_PROJECT_DIR}/$fl ${VANILLA_AIRFLOW}:${SPARK}/${MODULE_NAME}; done; fi
+  tags:
+    - spark_dynamic_stream_workflow_hosted
+
+
+include:
+  - project: 'devops'
+    file: 'tasks/blogs_stream_dynamic_workflow.yml'
+  - project: 'devops'
+    file: 'tasks/metrics_stream_dynamic_workflow.yml'
+  - project: 'devops'
+    file: 'tasks/posts_stream_dynamic_workflow.yml'
+  - project: 'devops'
+    file: 'tasks/streams_merger_dynamic_workflow.yml'

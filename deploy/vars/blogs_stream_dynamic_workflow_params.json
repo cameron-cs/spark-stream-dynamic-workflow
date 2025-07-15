@@ -1,0 +1,11 @@
+{
+"blogs_stream_dynamic_workflow_params": {
+  "kafkaHost" : "localhost:9092",
+  "kafkaConsumerGroup" : "Dynamic_workflow_Blogs_stream_to_parquet_1",
+  "blogsTopicName" : "Blogs",
+  "excludes": "{ \"_TRACE_ID\": [], \"_sentiment\": [], \"CollectMessage\": []}",
+  "primary":   "AvatarUrl,CreateDate,DateOfBirth,EducationLevel,IsValidated,IsVerified,Metrics.Audience,Metrics.CommentCount,Metrics.FollowCount,Metrics.FollowerCount,Metrics.FriendCount,Metrics.LikeCount,Metrics.PostCount,Metrics.RepostCount,Metrics.Timestamp,Metrics.ViewCount,MetricsAvg1w.CommentCount,MetricsAvg1w.LikeCount,MetricsAvg1w.PostCount,MetricsAvg1w.RepostCount,MetricsAvg1w.ViewCount,MetricsPrev.Audience,MetricsPrev.FollowerCount,Name,Nick,ProviderType,Type,Url,UrlHash",
+  "hdfsPath" : "/data/blogs_stream_job/Blogs/delta/parquet",
+  "hdfsOffsetsPath" : "/data/blogs_stream_job/offsets/Blogs/parquet"
+  }
+}

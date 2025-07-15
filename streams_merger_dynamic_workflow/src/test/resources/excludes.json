@@ -1,0 +1,156 @@
+{
+  "Author":[
+    "_TRACE_ID",
+    "MetricsAvg1w",
+    "UrlHashGuid",
+    "MetricsPrev",
+    "LastUpdateDate",
+    "CreateDate",
+    "Attachments",
+    "Follows",
+    "AvatarUrl",
+    "StudyWork",
+    "Url",
+    "HostUrl",
+    "Host",
+    "Military",
+    "Relatives",
+    "Followers",
+    "Reactors",
+    "Reposters",
+    "CollectMessage",
+    "ExtendedInfo",
+    "HomePage",
+    "ClassificationData",
+    "Exception",
+    "SubTitle"
+  ],
+  "Blog":[
+    "UrlHashGuid",
+    "Attachments",
+    "AvatarUrl",
+    "Follows",
+    "StudyWork",
+    "Military",
+    "Relatives",
+    "Followers",
+    "MetricsAvg1w",
+    "Url",
+    "Host",
+    "HostUrl",
+    "Reactors",
+    "Reposters",
+    "CollectMessage",
+    "ExtendedInfo",
+    "HomePage",
+    "ClassificationData",
+    "Exception",
+    "SubTitle",
+    "CreateDate",
+    "LastUpdateDate",
+    "MetricsPrev",
+    "_TRACE_ID"
+  ],
+  "Attachments":[
+    "Body",
+    "Content",
+    "Ocr.Body",
+    "Ocr.Boxes",
+    "Ocr.Items",
+    "Logo.Items.Boxes",
+    "Name",
+    "Url",
+    "UrlOriginal",
+    "Host",
+    "CreateDate",
+    "MetricsAvg1w",
+    "HttpStatusCode",
+    "SourceId"
+  ],
+  "HostUrl":[
+
+  ],
+  "Categories":[
+
+  ],
+  "Reactors":[
+
+  ],
+  "Reposters":[
+
+  ],
+  "UrlHashGuid":[
+
+  ],
+  "MetricsPrev":[
+
+  ],
+  "Categories":[
+
+  ],
+  "CollectMessage":[
+
+  ],
+  "CollectedDate":[
+
+  ],
+  "FullSourceData":[
+
+  ],
+  "GeoData":[
+
+  ],
+  "_TRACE_ID":[
+
+  ],
+  "_sentiment":[
+
+  ],
+  "MassMediaLinks":[
+
+  ],
+  "Body":[
+
+  ],
+  "VisibilityIndex":[
+
+  ],
+  "Rating":[
+
+  ],
+  "Parent":[
+
+  ],
+  "Topics":[
+
+  ],
+  "Toxicity":[
+
+  ],
+  "PostReports":[
+
+  ],
+  "ModificationInfo":{
+    "Modifications":[
+
+    ]
+  },
+  "PostCustomObjects":[
+
+  ],
+  "SpamTypes":[
+
+  ],
+  "ClustDupl":[
+
+  ],
+  "BodyHighlightXml":[
+
+  ],
+  "BlogansBodyHash":[
+
+  ],
+  "ClassificationData":[
+
+  ]
+}

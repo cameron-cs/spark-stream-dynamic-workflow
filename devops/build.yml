@@ -1,0 +1,24 @@
+.build_tpl:
+  stage: build
+  image: registry.yourhost.com/vanilla_hadoop/scala-sbt:2.13.8
+  script:
+    - export SBT_OPTS="-Xmx4G"
+    - sbt compile
+    - sbt package
+    - sbt common/assembly blogsStream/assembly metricsStream/assembly postsStream/assembly streamsMerger/assembly
+  artifacts:
+    name: "spark-dynamic-workflow-streams-$CI_COMMIT_TAG"
+    paths:
+      - ./blogs_stream_dynamic_workflow/target/${SCALA}/blogs_stream_dynamic_workflow.jar
+      - ./metrics_stream_dynamic_workflow/target/${SCALA}/metrics_stream_dynamic_workflow.jar
+      - ./posts_stream_dynamic_workflow/target/${SCALA}/posts_stream_dynamic_workflow.jar
+      - ./streams_merger_dynamic_workflow/target/${SCALA}/streams_merger_dynamic_workflow.jar
+    expire_in: 3 days
+  tags:
+      - spark_dynamic_stream_workflow_hosted
+
+
+BUILD:
+  extends: .build_tpl
+  variables:
+    DEP: ""

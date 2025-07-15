@@ -1,0 +1,12 @@
+{
+"posts_stream_dynamic_workflow_params":{
+  "kafkaHost" : "localhost:9092",
+  "kafkaConsumerGroup" : "Dynamic_workflow_Posts_stream_to_parquet_1",
+  "postsTopicName" : "Posts",
+  "hdfsPath" : "/data/posts_stream_job",
+  "hdfsOffsetsPath" : "/data/offsets/posts/parquet",
+  "excludes": "{\"Author\": [\"_TRACE_ID\", \"MetricsAvg1w\", \"UrlHashGuid\", \"MetricsPrev\", \"LastUpdateDate\", \"CreateDate\", \"Attachments\", \"Follows\", \"AvatarUrl\", \"StudyWork\", \"Url\", \"HostUrl\", \"Host\", \"Military\", \"Relatives\", \"Followers\", \"Reactors\", \"Reposters\", \"CollectMessage\", \"ExtendedInfo\", \"HomePage\", \"ClassificationData\", \"Exception\", \"SubTitle\"], \"Blog\": [\"UrlHashGuid\", \"Attachments\", \"AvatarUrl\", \"Follows\", \"StudyWork\", \"Military\", \"Relatives\", \"Followers\", \"MetricsAvg1w\", \"Url\", \"Host\", \"HostUrl\", \"Reactors\", \"Reposters\", \"CollectMessage\", \"ExtendedInfo\", \"HomePage\", \"ClassificationData\", \"Exception\", \"SubTitle\", \"CreateDate\", \"LastUpdateDate\", \"MetricsPrev\", \"_TRACE_ID\"], \"Attachments\": [\"Body\", \"Content\", \"Ocr.Body\", \"Ocr.Boxes\", \"Ocr.Items\", \"Logo.Items.Boxes\", \"Name\", \"Url\", \"UrlOriginal\", \"Host\", \"CreateDate\", \"MetricsAvg1w\", \"HttpStatusCode\", \"SourceId\"], \"HostUrl\": [], \"Categories\": [], \"Reactors\": [], \"Reposters\": [], \"UrlHashGuid\": [], \"MetricsPrev\": [], \"Categories\": [], \"CollectMessage\": [], \"CollectedDate\": [], \"FullSourceData\": [], \"GeoData\": [], \"_TRACE_ID\": [], \"_sentiment\": [], \"MassMediaLinks\": [], \"Body\": [], \"VisibilityIndex\": [], \"Rating\": [], \"Parent\": [], \"Topics\": [], \"Toxicity\": [], \"PostReports\": [], \"ModificationInfo\":{\"Modifications\": []}, \"PostCustomObjects\": [], \"SpamTypes\": [], \"ClustDupl\": [], \"BodyHighlightXml\": [], \"BlogansBodyHash\": [], \"ClassificationData\": []}",
+  "primary": "Author.Url,Author.Type,BlogansLanguage,Blog.Metrics.FollowerCount,Blog.UrlHash,Blog.Type,CreateDate, Metrics.CommentCount,UrlHash,IsSpam,Metrics.LikeCount,Metrics.Timestamp,ParentUrlHash,ParentUrl,ParentCommentUrl,ParentCommentUrlHash,Type,Url,PostNerObjects,PostNHObjects,Metrics.RepostCount,Author.ProviderType,Topics,Metrics.ViewCount,CurrentTimestamp,Toxicity,PartDate,KafkaPartition,KafkaOffset",
+  "dayFrame": 10
+}
+}

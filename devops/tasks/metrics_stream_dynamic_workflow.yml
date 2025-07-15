@@ -1,0 +1,10 @@
+METRICS_STREAMS_DYNAMIC_WORKFLOW:
+  extends: .deploy
+  stage: deploy
+  variables:
+    MODULE_NAME: "metrics_stream_dynamic_workflow"
+    DAG: "metrics_stream_dynamic_workflow_dag.py"
+    JAR: "./${MODULE_NAME}/target/${SCALA}/${MODULE_NAME}.jar"
+    VARS: "./deploy/vars/${MODULE_NAME}_params.json"
+    HOST_AIRFLOW: ${VANILLA_AIRFLOW}
+  when: manual

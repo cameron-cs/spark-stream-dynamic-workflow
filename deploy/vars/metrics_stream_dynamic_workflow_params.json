@@ -1,0 +1,9 @@
+{
+"metrics_stream_dynamic_workflow_params": {
+  "kafkaHost" : "localhost:9092",
+  "kafkaConsumerGroup" : "Dynamic_workflow_Metrics_stream_to_parquet_1",
+  "metricsTopicName" : "Metrics",
+  "hdfsPath" : "/data/metrics_stream_job/Metrics/delta/parquet",
+  "hdfsOffsetsPath" : "/data/metrics_stream_job/offsets/Metrics/parquet"
+}
+}
