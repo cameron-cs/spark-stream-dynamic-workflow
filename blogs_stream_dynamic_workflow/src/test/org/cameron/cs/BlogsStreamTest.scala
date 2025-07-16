@@ -47,8 +47,6 @@ class BlogsStreamTest extends BlogsStreamSpecTest {
 
     val savedBlogTestDeltaParquet = spark.read.parquet(savedPath)
 
-    val schemaUtil = SparkSchemaUtil
-
-    assert(schemaUtil.schemaDeepEqual(blogsFinal.schema, savedBlogTestDeltaParquet.schema))
+    assert(SparkSchemaUtil.schemaDeepEqual(blogsFinal.schema, savedBlogTestDeltaParquet.schema))
   }
 }
