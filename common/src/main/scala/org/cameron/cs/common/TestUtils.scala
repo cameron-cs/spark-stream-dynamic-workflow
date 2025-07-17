@@ -38,14 +38,6 @@ object TestUtils extends Logging {
     try source.getLines().mkString("\n") finally source.close()
   }
 
-  def readResourceTextFile(path: String): String = {
-    val stream = Option(getClass.getClassLoader.getResourceAsStream(path))
-      .getOrElse(sys.error(s"Resource not found: $path"))
-
-    val source = Source.fromInputStream(stream)
-    try source.getLines().mkString("\n") finally source.close()
-  }
-
   def dockerComposeUp(composeDirPath: String = ""): Unit =
     runDockerComposeCommand(Seq("docker-compose", "up", "-d"), composeDirPath)
 

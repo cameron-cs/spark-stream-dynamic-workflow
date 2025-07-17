@@ -7,7 +7,7 @@ object PostsTestDataStreamSchemaUtils {
 
   lazy val excludes: String = TestUtils.readResourceFileAsString("excludes.json")
 
-  lazy val primary: String = TestUtils.readResourceTextFile("primary.txt")
+  lazy val primary: String = TestUtils.readResourceFileAsString("primary.txt")
 
   val postsTestSchema: StructType = StructType(
     Seq(
